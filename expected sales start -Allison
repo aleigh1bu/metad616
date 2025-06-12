@@ -1,0 +1,5 @@
+#expected sales -goodness fit
+expected_model1<-fitdist(historical_data$stated_sales, "norm")
+expected_model2<-fitdist(historical_data$stated_sales, "weibull")
+expected_model3<-fitdist(historical_data$stated_sales, "lnorm")
+gofstat(list(expected_model1,expected_model2,expected_model3))
